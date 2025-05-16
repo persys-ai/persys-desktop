@@ -1,0 +1,116 @@
+#page_Library{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:#333333;
+    border-radius:10px;
+}
+
+#libraryList{
+    position:absolute;
+    top:0;
+    left:0;
+    width:250px;
+    bottom:0;
+    background:#222222;
+}
+#libraryList::-webkit-scrollbar{
+    display:none;
+}
+
+#libraryRagPageSelect{
+    z-index:11;
+    position:fixed;
+    top:10px;
+    right:50px;
+    background:#222222;
+    padding:5px;
+    border:0;
+    font-size:13px;
+    cursor:pointer;
+    font-family:'Nunito',sans-serif;
+    color:#DDDDDD;
+    border-radius:4px;
+}
+#librarySidebarRagButton{
+    z-index:11;
+    position:fixed;
+    top:10px;
+    right:20px;
+    color:#DDDDDD;
+    font-size:15px;
+    padding:5px;
+    cursor:pointer;
+}
+#librarySidebarToggle{
+    z-index:11;
+    position:fixed;
+    top:10px;
+    left:200px;
+    font-size:15px;
+    background:transparent;
+    border:0;
+    color:#CCCCCC;
+    cursor:pointer;
+    border-radius:5px;
+    padding:4px;
+}
+#librarySidebarToggle:hover{
+    background:#434343;
+}
+#libraryListActions{
+    position:absolute;
+    top:0;
+    left:0;
+    width:250px;
+    height:80px;
+    text-align:center;
+}
+#libraryListSearch{
+    background:#111111;
+    padding:10px;
+    border-radius:20px;
+    margin-bottom:10px;
+    font-size:13px;
+    font-family:'Nunito',sans-serif;
+    color:#DDDDDD;
+    border:0;
+    outline:none;
+    -webkit-appearance:none;
+    width:200px;
+    margin-top:40px;
+}
+#libraryListTable{
+    margin-top:100px;
+    border-collapse:collapse;
+}
+#libraryListTable tr:hover{
+    background:#434343;
+}
+#libraryListTable td:first-child{
+    border-top-left-radius:8px;
+    border-bottom-left-radius:8px;
+}
+#libraryListTable td:last-child:hover{
+    border-top-right-radius:8px;
+    border-bottom-right-radius:8px;
+}
+.libraryListItem{
+    font-family:'Nunito',sans-serif;
+    font-size:15px;
+    color:#DDDDDD;
+    padding:10px;
+    cursor:pointer;
+}
+
+
+#libraryReader{
+    position:absolute;
+    top:50px;
+    left:250px;
+    right:0;
+    bottom:0;
+    overflow-y:auto;
+}

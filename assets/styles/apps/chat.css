@@ -1,0 +1,238 @@
+body{
+    background:transparent !important;
+}
+#chat{
+    z-index:3;
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    padding:10px;
+    background:#333333;
+    border:0;
+    backdrop-filter:blur(7px);
+    -webkit-backdrop-filter:blur(7px);
+    border-radius:10px;
+    overflow-x:hidden;
+}
+#newChatSession{
+    position:absolute;
+    right:20px;
+    top:20px;
+    color:#EDEDED;
+    font-size:20px;
+    cursor:pointer;
+    border:0;
+    background:transparent;
+}
+#tabs{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    width:225px;
+    overflow-y:auto;
+    background:#222222;
+    padding:10px;
+}
+#tabs::-webkit-scrollbar{
+    display:none;
+}
+#tabsTable{
+    border-collapse:collapse;
+    margin-top:50px;
+}
+#tabsTable td:first-child{
+    border-top-left-radius:8px;
+    border-bottom-left-radius:8px;
+}
+#tabsTable td:last-child{
+    border-top-right-radius:8px;
+    border-bottom-right-radius:8px;
+}
+.chatSessionTab{
+    font-family:'Teachers',sans-serif;
+    font-size:17px;
+    font-weight:400;
+    color:#555555;
+    cursor:pointer;
+    padding:10px;
+    border:1px solid transparent;
+}
+.chatSessionTabActive{
+    color:#EDEDED;
+}
+.chatSessionOptions{
+    font-size:17px;
+    color:#EDEDED;
+    border:0;
+    cursor:pointer;
+    visibility:hidden;
+    background:transparent;
+}
+#tabsTable tr:hover .chatSessionOptions{
+    visibility:visible;
+}
+
+#inputBox{
+    background:rgba(31,31,31,0.7);
+    border:1px solid #555555;
+    border-radius:15px;
+    position:absolute;
+    bottom:15px;
+    left:275px;
+    right:15px;
+    display:flex;
+    padding:10px;
+}
+#inputField{
+    background:transparent;
+    outline:none;
+    padding:10px;
+    border:0;
+    outline:none;
+    width:100%;
+    -webkit-appearance:none;
+    font-family:'Nunito',sans-serif;
+    font-size:16px;
+    color:#EDEDED;
+    resize:none;
+}
+#inputButton{
+    background:rgba(240,240,240,0.7);
+    border-radius:100%;
+    color:#555555;
+    padding:10px;
+    width:40px;
+    height:40px;
+    cursor:pointer;
+    font-size:18px;
+    border:0;
+}
+#chatOptions{
+    position:absolute;
+    top:15px;
+    left:250px;
+    right:15px;
+    height:50px;
+    padding:10px;
+    font-size:20px;
+    font-family:'Teachers',sans-serif;
+    color:#FFFFFF;
+}
+#chatPersonalities{
+    -webkit-appearance:none;
+    background:#222222;
+    padding:10px;
+    width:200px;
+    border:1px solid #434343;
+    border-radius:8px;
+    font-family:'Nunito',sans-serif;
+    font-size:13px;
+    color:#DDDDDD;
+    outline:none;
+}
+#chatOptionsButton{
+    font-size:17px;
+    color:#777777;
+    cursor:pointer;
+    margin-left:10px;
+    background:transparent;
+    border:0;
+}
+#response{
+    position:absolute;
+    top:75px;
+    bottom:120px;
+    left:250px;
+    right:15px;
+    padding:35px;
+    border-radius:20px;
+    overflow-y:auto;
+    background:transparent;
+    border:0;
+}
+#response::-webkit-scrollbar{
+    display:none;
+}
+#chatTable{
+    border-collapse:collapse;
+}
+.inputText{
+    padding:12px;
+    border-radius:20px;
+    background:rgba(31,31,31,0.8);
+    backdrop-filter:blur(7px);
+    -webkit-backdrop-filter:blur(7px);
+    color:#DDDDDD;
+    font-size:17px;
+    width:fit-content;
+    float:right;
+    margin-bottom:5px;
+    font-family:'Nunito',sans-serif;
+    line-height:28px;
+}
+.inputFile{
+    padding:12px;
+    border-radius:20px;
+    background:#BFDCDC;
+    font-size:14px;
+    width:fit-content;
+    float:right;
+    margin-bottom:10px;
+    font-family:'Nunito',sans-serif;
+    font-weight:bold;
+}
+.responseText{
+    float:left;
+    color:#FFFFFF;
+    font-size:17px;
+    margin-bottom:5px;
+    font-family:'Nunito',sans-serif;
+    line-height:30px;
+}
+.responseCode{
+    padding:10px;
+    border-radius:10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    background:#222222;
+    border:1px solid #444444;
+}
+.responseThink{
+    padding:10px;
+    border-radius:10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    background:#444444;
+    border:1px solid #434343;
+    font-size:14px;
+    color:#999999;
+}
+#chatLoading{
+    max-height:50px;
+}
+think{
+    font-size:14px;
+    padding:10px;
+    color:#999999;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #chat{
+        display:none;
+        top:10px;
+        left:10px;
+        right:10px;
+        width:unset;
+        bottom:100px;
+    }
+    #tabs{
+        display:none;
+    }
+    #inputBox, #response{
+        left:15px;
+    }
+}

@@ -1,0 +1,132 @@
+body{
+    background:transparent !important;
+}
+#files{
+    z-index:3;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border-radius:10px;
+    background:#333333;
+}
+#gridBoxActions{
+    position:absolute;
+    top:30px;
+    left:20px;
+    right:20px;
+    margin-bottom:20px;
+}
+#searchField{
+    background:#222222;
+    width:300px;
+    -webkit-appearance:none;
+    padding:10px;
+    border:0;
+    outline:none;
+    font-size:13px;
+    font-family:'Teachers',sans-serif;
+    color:#FFFFFF;
+    border-radius:30px;
+}
+.actionButton{
+    margin-left:10px;
+    border:0;
+    font-size:20px;
+    cursor:pointer;
+    padding:10px;
+    border-radius:100%;
+    color:#FFFFFF;
+    background:transparent;
+}
+.actionButton:hover{
+    color:#FFFFFF;
+}
+.actionButtonText{
+    font-size:14px;
+    font-family:'Teachers',sans-serif;
+    font-weight:400;
+}
+
+#gridFilesBox{
+    position:absolute;
+    top:80px;
+    padding:5px;
+    left:20px;
+    right:20px;
+    bottom:20px;
+    overflow-y:auto;
+}
+#gridFilesBox::-webkit-scrollbar{
+    display:none;
+}
+#filesGrid{
+    display:flex;
+    flex-wrap:wrap;
+    overflow-y:auto;
+    justify-content:center;
+}
+.gridItem{
+    text-align:center;
+    margin-right:10px;
+    margin-left:10px;
+    padding:5px;
+    margin-bottom:10px;
+    width:100px;
+    border:1px solid transparent;
+    border-radius:10px;
+    -webkit-user-select:none;
+}
+.gridItemActive{
+    border:1px solid #CCCCCC !important;
+    background:rgba(100,100,100,0.5);
+}
+.gridItemFolderIcon{
+    font-size:50px;
+    color:#BAD8D8;
+}
+.gridItemFileIcon{
+    font-size:50px;
+    color:#EDEDED;
+}
+.gridItemThumb{
+    max-height:60px;
+    max-width:60px;
+    border-radius:5px;
+}
+.gridItemName{
+    font-size:14px;
+    font-family:'Teachers',sans-serif;
+    font-weight:400;
+    color:#EDEDED;
+}
+#pathIndicator{
+    padding:10px;
+    font-size:14px;
+    font-family:'Teachers',sans-serif;
+    color:#EDEDED;
+}
+.pathIndicatorFolder{
+    text-decoration:underline;
+    cursor:pointer;
+}
+.pathIndicatorFolder:hover{
+    color:#86B5B5;
+}
+
+@media only screen and (max-width: 600px) {
+    #files{
+        display:none;
+        top:10px;
+        left:10px;
+        right:10px;
+        bottom:100px;
+    }
+    #searchBox{
+        width:100px;
+    }
+    #gridFilesBox{
+
+    }
+}

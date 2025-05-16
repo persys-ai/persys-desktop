@@ -1,0 +1,57 @@
+#settingsSection{
+    position:fixed;
+    left:100px;
+    right:100px;
+    bottom:20px;
+    text-align:center;
+}
+#settingsBox{
+    margin:0 auto;
+    width:fit-content;
+    background:rgba(51,51,51,0.7);
+    backdrop-filter:blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+    border:1px solid #444444;
+    border-radius:10px;
+    display:flex;
+}
+.settingsTrigger{
+    color:#DDDDDD;
+    font-size:15px;
+    cursor:pointer;
+    height:40px;
+    width:40px;
+    padding:10px;
+    border:0;
+    background:transparent;
+}
+#settingsTrigger:hover{
+    color:#FFFFFF;
+}
+#logoutTrigger:hover{
+    color:#E83A3A;
+}
+#deviceTriggerCorner{
+    position:fixed;
+    top:20px;
+    right:20px;
+    max-width:25px;
+    max-height:25px;
+    cursor:pointer;
+    padding:10px;
+    background:rgba(51,51,51,0.7);
+    backdrop-filter:blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+    border:1px solid #444444;
+    border-radius:100%;
+}
+#deviceTrigger{
+    max-width:20px;
+    max-height:20px;
+    padding:10px;
+    cursor:pointer;
+    opacity:0.8;
+}
+#deviceTrigger:hover{
+    opacity:1;
+}

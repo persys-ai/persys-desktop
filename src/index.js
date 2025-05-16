@@ -1,5 +1,6 @@
-const { app, BrowserWindow, ipcMain,Menu,session } = require('electron');
+const { app, BrowserWindow, ipcMain,Menu,session ,dialog} = require('electron');
 const path = require('node:path');
+const { updateElectronApp, UpdateSourceType }=require('update-electron-app');
 //
 
 let titleBarVisibility='hidden';
@@ -310,8 +311,8 @@ ipcMain.on('open-cardclip', (event, arg) => {
 ipcMain.on('open-options', (event, arg) => {
   let pos=getPos();
   const viewer = new BrowserWindow({
-    width: 500,
-    height: 375,
+    width: 650,
+    height: 425,
     titleBarStyle:titleBarVisibility,
     trafficLightPosition:{x:10,y:10},
     webPreferences: {
@@ -485,3 +486,10 @@ app.on('window-all-closed', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+
+updateElectronApp({
+  updateSource: {
+    type: UpdateSourceType.StaticStorage,
+    baseUrl: `https://persys.s3.us-east-1.amazonaws.com/persys-client/updates/${process.platform}/${process.arch}`
+  }
+});
